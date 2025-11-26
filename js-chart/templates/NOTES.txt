@@ -1,0 +1,15 @@
+Thank you for installing {{ .Chart.Name }}.
+
+Your release is named {{ .Release.Name }}.
+
+This chart demonstrates JavaScript-based chart rendering in Nelm!
+
+The following resources have been created:
+  - Deployment: {{ .Release.Name }}-web ({{ .Values.replicaCount }} replicas)
+  - Service: {{ .Release.Name }}-web ({{ .Values.service.type }})
+
+To learn more about the chart, see the README.md file.
+
+Note: This NOTES.txt file uses Go templates, while deployment and service
+manifests are rendered using JavaScript from the js-templates/ directory.
+This demonstrates coexistence of both rendering methods!
