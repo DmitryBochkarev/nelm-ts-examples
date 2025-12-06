@@ -1,5 +1,20 @@
+import _ from 'lodash';
 
-export default function render(ctx: any) {
+export function render(ctx) {
+
+  function foo() {
+    throw new Error('Test error from js-simple chart')
+  }
+
+  function boo() {
+    return foo()
+  }
+
+
+  // Example usage of lodash
+  const labels = _.merge({ app: 'nginx' }, { environment: 'production' });
+  const replicaCount = _.clamp(3, 1, 10);
+
   return {
     apiVersion: 'v1',
     manifests: [
@@ -8,12 +23,10 @@ export default function render(ctx: any) {
         kind: 'Deployment',
         metadata: {
           name: 'nginx-deployment',
-          labels: {
-            app: 'nginx'
-          }
+          labels: labels
         },
         spec: {
-          replicas: 3,
+          replicas: false ?  boo() : replicaCount,
           selector: {
             matchLabels: {
               app: 'nginx'

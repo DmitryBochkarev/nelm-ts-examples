@@ -1,6 +1,0 @@
-apiVersion: v2
-name: js-chart-example
-description: Example chart demonstrating JavaScript-based chart rendering in Nelm
-type: application
-version: 1.0.0
-appVersion: "1.0"
