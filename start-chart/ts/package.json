@@ -1,0 +1,17 @@
+{
+  "name": "start-chart",
+  "version": "0.1.0",
+  "description": "TypeScript chart for start-chart",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "helm",
+    "nelm",
+    "kubernetes",
+    "chart"
+  ],
+  "license": "Apache-2.0"
+}
