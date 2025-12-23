@@ -1,0 +1,12 @@
+apiVersion: v2
+name: ts-root-chart
+version: 0.1.0
+description: Root chart using TypeScript with mixed dependencies
+
+dependencies:
+  - name: ts-subchart
+    version: 0.1.0
+    repository: file://charts/ts-subchart
+  - name: classic-subchart
+    version: 0.1.0
+    repository: file://charts/classic-subchart

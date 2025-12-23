@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ts-subchart
+version: 0.1.0
+description: TypeScript subchart dependency

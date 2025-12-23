@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: classic-subchart-config
+data:
+  source: "classic-subchart (Go Template)"
+  subchartMessage: {{ .Values.subchartMessage | quote }}
+  chartName: {{ .Chart.Name | quote }}
+  releaseName: {{ .Release.Name | quote }}

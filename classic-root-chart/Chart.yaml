@@ -1,0 +1,12 @@
+apiVersion: v2
+name: classic-root-chart
+version: 0.1.0
+description: Root chart using Go templates with mixed dependencies
+
+dependencies:
+  - name: ts-subchart
+    version: 0.1.0
+    repository: file://charts/ts-subchart
+  - name: classic-subchart
+    version: 0.1.0
+    repository: file://charts/classic-subchart

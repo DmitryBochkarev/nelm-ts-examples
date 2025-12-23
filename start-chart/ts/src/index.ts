@@ -1,39 +1,13 @@
 import { RenderContext, RenderResult } from '../types/nelm';
-import {
-  createDeployment,
-  createService,
-  createServiceAccount,
-  createIngress,
-  createHPA,
-} from './resources';
-import {
-  shouldCreateIngress,
-  shouldCreateHPA,
-  shouldCreateServiceAccount,
-} from './helpers';
+import { newDeployment, newService } from './resources';
 
-export function render(context: RenderContext): RenderResult {
+export function render($: RenderContext): RenderResult {
   const manifests: object[] = [];
 
-  // ServiceAccount
-  if (shouldCreateServiceAccount(context)) {
-    manifests.push(createServiceAccount(context));
-  }
+  manifests.push(newDeployment($));
 
-  // Deployment
-  manifests.push(createDeployment(context));
-
-  // Service
-  manifests.push(createService(context));
-
-  // Ingress
-  if (shouldCreateIngress(context)) {
-    manifests.push(createIngress(context));
-  }
-
-  // HorizontalPodAutoscaler
-  if (shouldCreateHPA(context)) {
-    manifests.push(createHPA(context));
+  if ($.Values.service?.enabled !== false) {
+    manifests.push(newService($));
   }
 
   return { manifests };

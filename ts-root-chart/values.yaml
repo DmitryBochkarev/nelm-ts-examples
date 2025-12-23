@@ -1,0 +1,7 @@
+rootMessage: "Hello from ts-root-chart"
+
+ts-subchart:
+  subchartMessage: "Hello from ts-subchart (under ts-root)"
+
+classic-subchart:
+  subchartMessage: "Hello from classic-subchart (under ts-root)"

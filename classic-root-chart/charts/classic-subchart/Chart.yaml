@@ -1,0 +1,4 @@
+apiVersion: v2
+name: classic-subchart
+version: 0.1.0
+description: Classic Helm subchart dependency with Go templates

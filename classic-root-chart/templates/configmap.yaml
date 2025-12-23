@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: classic-root-config
+data:
+  source: "classic-root-chart (Go Template)"
+  rootMessage: {{ .Values.rootMessage | quote }}
+  chartName: {{ .Chart.Name | quote }}
+  releaseName: {{ .Release.Name | quote }}
