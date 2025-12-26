@@ -1,6 +1,3 @@
-# Dependencies
-ts/node_modules/
-
 # Build output
 ts/dist/
 

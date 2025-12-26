@@ -23,5 +23,4 @@
 .vscode/
 
 # TypeScript chart files
-ts/node_modules/
 ts/dist/
